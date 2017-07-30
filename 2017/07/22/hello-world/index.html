@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="MonkeyBean&#39;s Blog">
 <meta property="og:description" content="Hexo是一款基于Node.js的静态博客框架，以下介绍的是在Mac系统下的搭建过程，简单实用，足够满足个人点滴的分享和记录，而无需个人服务器，可绑定域名。 环境配置必要软件包Node: v6.3.0Git: v2.6.3Npm: Node Package Manager v3.10.3 安装Hexohexo: v3.3.8 1$ sudo npm install -g hexo">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-07-30T11:59:19.000Z">
+<meta property="og:updated_time" content="2017-07-30T13:55:16.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo+github搭建个人博客">
 <meta name="twitter:description" content="Hexo是一款基于Node.js的静态博客框架，以下介绍的是在Mac系统下的搭建过程，简单实用，足够满足个人点滴的分享和记录，而无需个人服务器，可绑定域名。 环境配置必要软件包Node: v6.3.0Git: v2.6.3Npm: Node Package Manager v3.10.3 安装Hexohexo: v3.3.8 1$ sudo npm install -g hexo">
@@ -189,7 +189,7 @@
 <h3 id="本地站点预览"><a href="#本地站点预览" class="headerlink" title="本地站点预览"></a>本地站点预览</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
 <p>浏览器里访问(<a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a>), 启动本地服务，预览博客。</p>
 <h3 id="部署到github"><a href="#部署到github" class="headerlink" title="部署到github"></a>部署到github</h3><p>在github上创建个同账号名的repository，仓库名为：your_user_name.github.io<br>再修改blog/_config.yml配置文件，与github建立关联。</p>
-<figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">deploy</span>:</div><div class="line">  <span class="attribute">type</span>: git</div><div class="line">  <span class="attribute">repo</span>: <span class="attribute">https</span>:<span class="comment">//github.com/your_user_name/your_user_name.github.io.git</span></div><div class="line">  <span class="attribute">branch</span>: master</div></pre></td></tr></table></figure>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">deploy</span>:</div><div class="line">  <span class="attribute">type</span>: git</div><div class="line">  <span class="attribute">repo</span>: git<span class="variable">@github</span>.<span class="attribute">com</span>:your_user_name/your_user_name.github.io.git</div><div class="line">  #git的方式可以轻易配置免密码deploy，而用http/https的地址每次deploy都需要输入密码</div><div class="line">  <span class="attribute">branch</span>: master</div></pre></td></tr></table></figure>
 <p>还需要安装部署插件包:</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-deployer-git --save</div></pre></td></tr></table></figure>
 <p>执行deploy命令就可以将生成的静态页面push到github中：</p>
